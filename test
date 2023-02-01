@@ -1,0 +1,19 @@
+select
+    t.DEPT_CD   as  arcade_cd,
+    t.DEPT_NAME as  name,
+    a.DEPT_CD   as  area_id
+from
+    GGE_PROD.GGE_MASTER.MOM_DEPT t
+    left join
+    GGE_PROD.GGE_MASTER.MOM_DEPT a
+        on  t.UPPER_DEPT_CD = a.DEPT_CD
+where
+    t.tenpo_flag = 'Yes'
+    and
+    t.DEPT_NAME not like '%倉庫%'
+    and
+    t.DEPT_NAME not like '%廃止%'
+    and
+    t.DEPT_NAME not like '%[レ]%'
+    and
+    t.DEPT_NAME not like '%コラボカフェ%'
