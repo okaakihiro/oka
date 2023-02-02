@@ -1,7 +1,7 @@
 select
     t.DEPT_CD   as  arcade_cd,
     t.DEPT_NAME as  name,
-    a.DEPT_CD   as  Area_id
+    a.DEPT_CD   as  areadayooooooo_id
 from
     GGE_PROD.GGE_MASTER.MOM_DEPT t
     left join
@@ -17,3 +17,4 @@ where
     t.DEPT_NAME not like '%[レ]%'
     and
     t.DEPT_NAME not like '%コラボカフェ%'
+    -- it is new one
